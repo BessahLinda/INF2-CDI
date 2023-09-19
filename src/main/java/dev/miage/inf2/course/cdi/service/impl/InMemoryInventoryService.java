@@ -1,5 +1,6 @@
 package dev.miage.inf2.course.cdi.service.impl;
 
+import dev.miage.inf2.course.cdi.domain.ForBookStore;
 import dev.miage.inf2.course.cdi.exception.OutOfStockException;
 import dev.miage.inf2.course.cdi.model.Book;
 import dev.miage.inf2.course.cdi.service.InventoryService;
@@ -20,7 +21,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Dependent
-@Named("InventoryGoodForBookStore")
+@ForBookStore
 public class InMemoryInventoryService implements InventoryService<Book> {
 
     ConcurrentMap<String, BlockingDeque<Book>> inventory = new ConcurrentHashMap<>();
