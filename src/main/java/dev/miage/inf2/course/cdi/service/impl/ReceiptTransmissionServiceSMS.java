@@ -1,8 +1,8 @@
 package dev.miage.inf2.course.cdi.service.impl;
 
 import com.twilio.Twilio;
-import com.twilio.type.PhoneNumber;
 import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
 import dev.miage.inf2.course.cdi.model.Customer;
 import dev.miage.inf2.course.cdi.model.Receipt;
 import dev.miage.inf2.course.cdi.service.ReceiptTransmissionService;

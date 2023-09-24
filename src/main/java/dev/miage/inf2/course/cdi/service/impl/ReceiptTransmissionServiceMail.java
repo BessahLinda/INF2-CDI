@@ -5,8 +5,10 @@ import dev.miage.inf2.course.cdi.model.Receipt;
 import dev.miage.inf2.course.cdi.service.ReceiptTransmissionService;
 import jakarta.enterprise.context.Dependent;
 import jakarta.mail.*;
-import jakarta.mail.internet.*;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
+import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeBodyPart;
+import jakarta.mail.internet.MimeMessage;
+import jakarta.mail.internet.MimeMultipart;
 
 import java.util.Properties;
 

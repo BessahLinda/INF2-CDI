@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD, ElementType.PARAMETER, ElementType.FIELD})
-public @interface ForBookStore {
+public @interface ForCandyStore {
 }

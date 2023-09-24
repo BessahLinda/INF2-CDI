@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Modal for selling candy -->
+<div class="modal fade" id="sellModal" tabindex="-1" aria-labelledby="sellModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sellModalLabel">Sell Candy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/candy/sell" method="POST">
+                    <input type="hidden" name="flavor" id="sellCandyFlavor">
+                    <div class="form-group">
+                        <label for="age">Customer Age</label>
+                        <input type="number" class="form-control" id="age" name="customerAge" placeholder="Age of the customer">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sell Candy</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const sellModal = document.getElementById('sellModal');
+    sellModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const flavor = button.getAttribute('data-candy-flavor');
+        const input = sellModal.querySelector('#sellCandyFlavor');
+        input.value = flavor;
+    });
+</script>
+
+<body>
+
+</body>
+</html>
